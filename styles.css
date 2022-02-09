@@ -1,0 +1,160 @@
+:root {
+  --blue: #1C6EF2;
+  --gray: var(--tint40);
+  --green: #298540;
+  --orange: #D47500;
+  --orbit: #603AA1;
+  --purple: var(--orbit);
+  --red: #C8102E;
+  --deepred: #76232F;
+  --deeppurple: #2E1166;
+  --tint10: #E8E8E8;
+  --tint20: #D2D1D1;
+  --tint30: #BABABA;
+  --tint40: #A4A4A3;
+  --tint50: #8D8D8C;
+  --tint60: #777676;
+  --tint70: #605F5E;
+  --tint80: #494948;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 0 10ex;
+  width: 60em;
+}
+
+.barGraphStacked {
+  align-items: center;
+  display: flex;
+  margin-top: 1ex;
+}
+
+.barGraphStacked div {
+  border: 1px solid black;
+  border-radius: 5px;
+  flex-grow: 1;
+  height: 10px;
+}
+
+.barGraphStacked span {
+  flex-grow: 0;
+  font-family: sans-serif;
+  font-size: 90%;
+  font-weight: normal;
+  margin-right: 1ex;
+}
+
+.datafile {
+  background: var(--orbit);
+  border: 1px solid var(--orbit);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  padding: 6px 1ex 4px;
+  user-select: none;
+}
+
+.datafile + .datafile {
+  margin-left: 1ex;
+}
+
+.datafile[data-hidden="true"] {
+  background: transparent;
+  color: var(--deeppurple);
+}
+
+.datafile .close {
+  background: white;
+  border-radius: 2px;
+  color: black;
+  margin-left: 1ex;
+  padding: 1px 4px 0px;
+}
+
+.figcaption {
+  cursor: pointer;
+  font-size: 120%;
+  font-weight: 999;
+}
+
+.figure {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1ex;
+  box-shadow:
+    0 3px 3px rgba(0, 0, 0, 0.03),
+    0 6px 6px rgba(0, 0, 0, 0.04),
+    0 12px 12px rgba(0, 0, 0, 0.05),
+    0 24px 24px rgba(0, 0, 0, 0.06)
+  ;
+  margin: 0;
+  padding: 20px 30px;
+}
+
+.figure:hover {
+  box-shadow:
+    0 3px 3px rgba(0, 0, 0, 0.06),
+    0 6px 6px rgba(0, 0, 0, 0.07),
+    0 12px 12px rgba(0, 0, 0, 0.08),
+    0 24px 24px rgba(0, 0, 0, 0.09)
+  ;
+}
+
+.figure[open] .barGraphStacked {
+  display: none;
+}
+
+.figure + .figure {
+  margin-top: 1em;
+}
+
+.filesUpload {
+  display: block;
+  margin-top: 2ex;
+  overflow: auto;
+  padding: 2ex 0;
+}
+
+.filesUpload + .filesUpload {
+  margin-bottom: 2ex;
+  margin-top: 0;
+}
+
+.help {
+  border: 2px solid var(--green);
+  border-radius: 4px;
+}
+
+.help[open] {
+  border-color: var(--green);
+}
+
+.help summary {
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 400;
+  padding: calc(2ex + 2px) 2ex 2ex;
+  user-select: none;
+}
+
+.help summary:focus {
+  box-shadow:
+    0 3px 3px rgba(0, 0, 0, 0.03),
+    0 6px 6px rgba(0, 0, 0, 0.04),
+    0 12px 12px rgba(0, 0, 0, 0.05),
+    0 24px 24px rgba(0, 0, 0, 0.06)
+  ;
+  text-decoration: underline;
+}
+
+.help[open] summary {
+  background: var(--green);
+  box-shadow: none;
+  color: white;
+}

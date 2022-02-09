@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Survey Trend Analyzer</title>
+
+  <link href="logo.svg" rel="icon" type="image/svg+xml" />
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <h1>Survey Trend Analyzer</h1>
+
+  <div data-app></div>
+
+  <footer>
+    <details class="help">
+      <summary>Instructions</summary>
+
+      <ol>
+        <li>Prepare each dataset (quarterly responses) as a single file. The format of the file(s) should follow:
+          <pre>
+            Area,              Bad, Meh, Yay
+            Support,            3,   6,   1
+            Teamwork,           2,   4,   4
+            Pawns or Players,   5,   5,   0
+            Mission,            3,   7,   0
+            Health of codebase, 4,   5,   1
+            Suitable process,   2,   7,   1
+            Delivering value,   2,   8,   0
+            Learning,           0,   6,   4
+            Speed,              4,   6,   0
+            Easy to release,    1,   8,   1
+            Fun,                1,   7,   3
+          </pre>
+        </li>
+        <li>Save each file as a CSV; following the pattern: "YYYY-Q.csv".</li>
+        <li>Upload all of these files to this tool using the "Browse" button below; either all as a single upload or individually</li>
+      </ol>
+    </details>
+  </footer>
+
+  <script defer src="app.js" type="module"></script>
+</body>
+</html>
